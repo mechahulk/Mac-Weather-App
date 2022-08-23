@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback) => {
             const curDate = new Date(body.location.localtime)
             console.log(curDate.getMonth(), curDate.getDate(), curDate.getFullYear())
             callback(undefined, 'Local date and time is ' + body.location.localtime + '. ' +
-                body.current.weather_descriptions[0] + ' and currently at ' + body.current.temperature + '°c, it also feels like ' + body.current.feelslike + '°c.')
+                body.current.weather_descriptions[0] + ' and currently at ' + body.current.temperature + '°c, it also feels like ' + body.current.feelslike + '°c. Humidity is ' + body.current.humidity + '%')
         }
     })
 }
